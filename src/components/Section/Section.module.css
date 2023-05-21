@@ -1,0 +1,15 @@
+.section {
+  /* margin: 50px; */
+  padding-bottom: 30px;
+
+  width: 400px;
+
+  background-color: #b7cbe5;
+}
+
+.sectionTitle {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  text-align: center;
+  color: #fff;
+}

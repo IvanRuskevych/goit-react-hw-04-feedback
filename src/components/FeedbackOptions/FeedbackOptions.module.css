@@ -1,0 +1,7 @@
+.list {
+  display: flex;
+  justify-content: space-around;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
