@@ -6,19 +6,18 @@ import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
-  const stateKeys = Object.keys(options);
   return (
     <ul className={css.list}>
-      {stateKeys.map(state => {
+      {options.map(option => {
         return (
           <li key={nanoid(5)}>
             <Button
               variant="contained"
               type="button"
-              name={state}
-              onClick={() => onLeaveFeedback(state)}
+              name={option}
+              onClick={() => onLeaveFeedback(option)}
             >
-              {state}
+              {option}
             </Button>
           </li>
         );
@@ -30,6 +29,6 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
